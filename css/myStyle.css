@@ -5,16 +5,27 @@ h1 {
 		width: 100%;
 		float: left;
 }
-p  {
+p.p1 {
 		overflow: auto;
 		color:red;
 		float:left;
+		text-align:center;
+		margin:10px;
 		padding:10px;
 		max-width:500px;
 }	
+p.p2{
+	
+		overflow: auto;
+		color:blue;
+		text-align:center;
+		margin:auto;
+		padding:auto;
+		max-width:500px;
+		position:absolute;
+}
 
 footer{
-		text-align: center;
 		clear: left;
 		color:orange;
 }
@@ -22,11 +33,10 @@ footer{
 div.d1{
 		height: 400px;
 		width:300px;
-		border: 1px solid black;
-		float:right;
 		padding: 30px;
 		text-align: center;
 		overflow:auto;
+		margin:auto;
 }
 
 body{
