@@ -4,32 +4,39 @@ h1 {
 		padding: 10px;
 		width: 100%;
 		float: left;
-		border: 1px solid red;
 }
-p  {
+p.p1 {
 		overflow: auto;
 		color:red;
 		float:left;
+		text-align:center;
+		margin:10px;
 		padding:10px;
 		max-width:500px;
-		border: 1px solid yellow;
 }	
+p.p2{
+	
+		overflow: auto;
+		color:blue;
+		text-align:center;
+		margin:auto;
+		padding:auto;
+		max-width:500px;
+		position:absolute;
+}
 
 footer{
-		text-align: center;
 		clear: left;
 		color:orange;
-		border: 1px solid orange;
 }
 
 div.d1{
 		height: 400px;
 		width:300px;
-		border: 1px solid black;
-		float:right;
 		padding: 30px;
 		text-align: center;
 		overflow:auto;
+		margin:auto;
 }
 
 body{
