@@ -1,49 +1,111 @@
 
-h1 {
-		color:blue;
-		padding: 10px;
-		width: 100%;
-		float: left;
+/*fonts*/
+@font-face {
+		font-family: Bascula;
+		src: url(fonts/BasculaCollege.ttf);
 }
-p.p1 {
-		overflow: auto;
-		color:red;
-		float:left;
-		text-align:center;
-		margin:10px;
-		padding:10px;
-		max-width:500px;
-}	
-p.p2{
+
+@font-face {
 	
-		overflow: auto;
-		color:blue;
-		text-align:center;
-		margin:auto;
-		padding:auto;
-		max-width:500px;
-		position:absolute;
+		font-family: Hacked;
+		src: url(fonts/HACKED.ttf);
+}
+
+
+
+
+
+/*boxes*/
+header {
+		font-family:Hacked;
+		font-size: 30px;
+		margin:0 0 0 0;
+		border:0 0 0 0;
+		text-align: center;
+		text-color: #000000;
+}
+
+body{ 
+		left: 0;
+		padding: 0;
+		margin:0;
+		background-image: url("res/background-img.png");
+		background-color:rgba(0,0,0,.5);	
 }
 
 footer{
 		clear: left;
 		color:orange;
+		background-color:rgba(200,2,255,.1);
+		font-family: Microsoft JhengHei Light;
 }
 
-div.d1{
-		height: 400px;
-		width:300px;
+h1 {
+		width: 100%;
+		display:inline-block;
+		margin:0 5px 5px 0;
+		font-family: Microsoft JhengHei Light;
+		font-weight: bold;
+}
+
+
+
+
+
+/*classes*/
+.ib{
+		float:left;
+}
+
+.card {
+		overflow: auto;
+		width: 250px;
+		background-color:rgba(200,255,20,.1);
+		display:block;
+		position:static;
+		margin:auto;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		text-align: center;
+		font-family: Microsoft JhengHei Light;
+}
+
+.p1 {
+		overflow: auto;
+		color:red;
+		display: block;
+		text-align:center;
+		margin:auto;
+		padding:5px;
+		min-width:200px;
+		max-width:300px;
+		background-color:rgba(255, 255, 255, .25);
+		font-family: Microsoft JhengHei Light;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.p2{
+	
+		overflow: auto;
 		padding: 30px;
 		text-align: center;
-		overflow:auto;
-		margin:auto;
+		line-height:100px;
+		height:100px;
+		margin-left:auto;
+		margin-right:auto;
+		display: block;
+		position:static;
+		background-color:rgba(200, 255, 255, .25);
+		font-family: Microsoft JhengHei Light;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-body{
-		left: 0;
-		padding: 0;
-		margin:0;
+.p2:hover{
+		background-color:rgba(200,255,255,.5);
 }
+
+
+
+/*nav*/
 
 ul {
 		list-style-type: none;
@@ -51,9 +113,11 @@ ul {
 		float: left;
 		width: 100%;
 		height:44px;
-		margin: 0;
+		margin-bottom:5px;
+		margin-top:0;
 		padding: 0;
 		background-color: #d90036;
+		font-family: Bascula;
 }
 
 li {
@@ -68,9 +132,6 @@ a {
 .active {
 		background-color: #8600b3;
 }
-
-
-
 
 li a, .dropbtn {
 		display: inline-block;
