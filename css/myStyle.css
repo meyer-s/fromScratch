@@ -16,6 +16,7 @@
 
 
 /*boxes*/
+
 header {
 		font-family:Hacked;
 		font-size: 30px;
@@ -29,8 +30,7 @@ body{
 		left: 0;
 		padding: 0;
 		margin:0;
-		background-image: url("res/background-img.png");
-		background-color:rgba(0,0,0,.5);	
+		background-image: url("res/background-img.gif") ;	
 }
 
 footer{
@@ -53,9 +53,6 @@ h1 {
 
 
 /*classes*/
-.ib{
-		float:left;
-}
 
 .card {
 		overflow: auto;
@@ -73,14 +70,20 @@ h1 {
 		overflow: auto;
 		color:red;
 		display: block;
+		float:left;
 		text-align:center;
-		margin:auto;
+		margin-left:10px;
 		padding:5px;
-		min-width:200px;
-		max-width:300px;
-		background-color:rgba(255, 255, 255, .25);
+		width:100px;
+		background-color:rgba(205, 100, 105, .25);
 		font-family: Microsoft JhengHei Light;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		transition: 1s ease;
+		-webkit-transition: width 2s ease;
+}
+
+.p1:hover{
+		width:300px;
 }
 
 .p2{
@@ -94,17 +97,90 @@ h1 {
 		margin-right:auto;
 		display: block;
 		position:static;
-		background-color:rgba(200, 255, 255, .25);
+		background-color:rgba(190, 245, 245, .25);
 		font-family: Microsoft JhengHei Light;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		transition:.5s;
+		-webkit-transition: .5s;
 }
 
 .p2:hover{
-		background-color:rgba(200,255,255,.5);
+		background-color:rgba(200,255,255,.6);
+}
+
+.p3{
+		visibility: hidden;
+		transition: 1s ease;
+		-webkit-transition: width 2s ease;
+}
+
+.p3:hover{
+		overflow: auto;
+		color:red;
+		position:static;
+		text-align:center;
+		margin-left:10px;
+		padding:5px;
+		width:100px;
+		background-color:rgba(205, 100, 105, .25);
+		font-family: Microsoft JhengHei Light;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		display:block;
 }
 
 
 
+/*animation*/ 
+.a1{
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		position: relative;
+		display:block;
+		margin-left:auto;
+		margin-right:auto;
+		-webkit-animation-name: example; /* Chrome, Safari, Opera */
+		-webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+		animation-name: example;
+		animation-duration: 4s;
+}
+
+.a1:hover{
+	
+		width: 100px;
+		height: 100px;
+		background-color: red;
+		position: relative;
+		-webkit-animation-name: example; /* Chrome, Safari, Opera */
+		-webkit-animation-duration: 4s; /* Chrome, Safari, Opera */
+		animation-name: example1;
+		animation-duration: 4s;
+		animation-play-state: initial;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes example {
+		0%   {background-color:red; left:0px; top:0px;}
+		25%  {background-color:yellow; left:200px; top:0px;}
+		50%  {background-color:blue; left:200px; top:200px;}
+		75%  {background-color:green; left:0px; top:200px;}
+		100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+		0%   {background-color:red; left:0px; top:0px;}
+		25%  {background-color:yellow; left:200px; top:0px;}
+		50%  {background-color:blue; left:200px; top:200px;}
+		75%  {background-color:green; left:0px; top:200px;}
+		100% {background-color:red; left:0px; top:0px;}
+}
+
+@keyframes example1 {
+	to{width:auto;}
+}
+
+	
 /*nav*/
 
 ul {
@@ -117,7 +193,7 @@ ul {
 		margin-top:0;
 		padding: 0;
 		background-color: #d90036;
-		font-family: Bascula;
+		font-family: Century Gothic;
 }
 
 li {
@@ -127,6 +203,7 @@ li {
 a {
 		display: block;
 		padding: 0px;
+		transition:.2s;
 } 
 
 .active {
