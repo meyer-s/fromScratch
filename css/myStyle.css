@@ -89,17 +89,16 @@ h1 {
 .p2{
 	
 		overflow: auto;
-		padding: 30px;
+		padding: 0px;
 		text-align: center;
 		line-height:100px;
-		height:100px;
 		margin-left:auto;
 		margin-right:auto;
 		display: block;
 		position:static;
 		background-color:rgba(190, 245, 245, .25);
 		font-family: Microsoft JhengHei Light;
-		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		box-shadow:inset 0 4px 8px 0 rgba(0, 0, 0, 0.2),inset 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		transition:.5s;
 		-webkit-transition: .5s;
 }
@@ -109,9 +108,20 @@ h1 {
 }
 
 .p3{
-		visibility: hidden;
-		transition: 1s ease;
-		-webkit-transition: width 2s ease;
+		overflow: auto;
+		color:red;
+		position:static;
+		text-align:center;
+		margin-left:10px;
+		padding:5px;
+		width:100px;
+		height:75px;
+		background-color:rgba(205, 100, 105, .25);
+		font-family: Microsoft JhengHei Light;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		display:block;
+		-webkit-transition: width 1s ease, height 1s ease;
+		transition: width 1s ease, height 1s ease;
 }
 
 .p3:hover{
@@ -121,12 +131,176 @@ h1 {
 		text-align:center;
 		margin-left:10px;
 		padding:5px;
-		width:100px;
+		width:125px;
+		height:100px;
 		background-color:rgba(205, 100, 105, .25);
 		font-family: Microsoft JhengHei Light;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		display:block;
 }
+
+.p4{
+		overflow: auto;
+		color:red;
+		position:static;
+		text-align:center;
+		margin-left:10px;
+		padding:5px;
+		width:100px;
+		background-color:rgba(205, 0, 105, .25);
+		font-family: Microsoft JhengHei Light;
+		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		display:block;
+}
+
+/*Images*/
+div.img {
+		border: 1px solid #ccc;
+}
+
+div.img:hover {
+		border: 1px solid #777;
+}
+
+div.img img {
+		width: 100%;
+		height: auto;
+}
+
+div.desc {
+		padding: 15px;
+		text-align: center;
+}
+
+* {
+		box-sizing: border-box;
+}
+
+.responsive {
+		padding: 0 6px;
+		float: left;
+		width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+		content: "";
+		display: table;
+		clear: both;
+}
+
+
+
+/*Img Modal*/
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	font-family: Micosoft JhengHei Light;
+}
+
+/* Modal Content (image) */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+	font-family: Micosoft JhengHei Light;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes zoom {
+    from {transform: scale(0.1)}
+    to {transform: scale(1)}
+}
+
+/* The Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+	width: 20px;
+	height:20px;
+	padding:0px;
+	margin:0px;
+	line-height:12.5px;
+	text-align:center;
+    color: #f1f1f1;
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+	font-family: Microsoft JhengHei Light;
+	border: 1px white solid;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+	border-color: #bbb;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+	
 
 
 
