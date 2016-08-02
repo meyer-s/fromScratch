@@ -164,6 +164,7 @@ h1 {
 		border-radius: 4px;
 		background-color: #f4511e;
 		border: none;
+		outline:none;
 		color: #FFFFFF;
 		text-align: center;
 		font-size: 28px;
