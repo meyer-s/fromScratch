@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
+	<meta charset="UTF-8">
 <link rel="stylesheet" type="text/css" href="css/myStyle.css" />
 	
 	<nav>
@@ -16,46 +17,83 @@
 		</li><a href="testing.html" style="text-decoration:none; padding-top:14px;padding-bottom:0; padding-left:2px; color:white;"> >> Tests</a>
 		</ul>
 	</nav>
+	<body onload="load()" style="margin:0;">
+	<div id="loader"></div>
+	<div class="animate-bottom" id="myDiv" style="display:none">
 	<div class="card">
 		
 		<p>Click the button to get your coordinates.</p>
 		
 		<button onclick="getLocation()" >Try It</button>
 		
-		<p id="demo"></p>
-		
-		<script>
-			var x = document.getElementById("demo");
-			
-			function getLocation() {
-				if (navigator.geolocation) {
-					navigator.geolocation.getCurrentPosition(showPosition, showError);
-				} else {
-					x.innerHTML = "Geolocation is not supported by this browser.";
-				}
-			}
-			
-			function showPosition(position) {
-				x.innerHTML = "Latitude: " + position.coords.latitude +
-				"<br>Longitude: " + position.coords.longitude;
-			}
-			
-			function showError(error) {
-				switch(error.code) {
-					case error.PERMISSION_DENIED:
-					x.innerHTML = "User denied the request for Geolocation."
-					break;
-					case error.POSITION_UNAVAILABLE:
-					x.innerHTML = "Location information is unavailable."
-					break;
-					case error.TIMEOUT:
-					x.innerHTML = "The request to get user location timed out."
-					break;
-					case error.UNKNOWN_ERROR:
-					x.innerHTML = "An unknown error occurred."
-					break;
-				}
-			}
-		</script>
+		<p id="loc"></p>
 	</div>
+	
+	<p>Click to unlock</p>
+	<p class="p4" id="yolo" style="margin-left:auto;margin-right:auto;" onclick='document.getElementById("yolo").className="p3"'>imagine there was nice text here</p>
+	
+	<button id="btn" class="button" style="vertical-align:middle;position:static" onclick="toggleVisibility('ghost')"><span> whoa </span></button>
+	<p id='ghost' class="p3" style="opacity:0;margin-left:auto;margin-right:auto; width:100px; height:100px;">Why hello there!!</p>
+	</div>
+	</body>
+		
+	<script>
+		var x = document.getElementById("loc");
+		var myVar;
+			
+		function getLocation() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition, showError);
+			} else {
+				x.innerHTML = "Geolocation is not supported by this browser.";
+			}
+		}
+			
+		function showPosition(position) {
+			x.innerHTML = "Latitude: " + position.coords.latitude +
+			"<br>Longitude: " + position.coords.longitude;
+		}
+			
+		function showError(error) {
+			switch(error.code) {
+				case error.PERMISSION_DENIED:
+				x.innerHTML = "User denied the request for Geolocation."
+				break;
+				case error.POSITION_UNAVAILABLE:
+				x.innerHTML = "Location information is unavailable."
+				break;
+				case error.TIMEOUT:
+				x.innerHTML = "The request to get user location timed out."
+				break;
+				case error.UNKNOWN_ERROR:
+				x.innerHTML = "An unknown error occurred."
+				break;
+			}
+		}
+		
+		function toggleVisibility(id) {
+			var e = document.getElementById(id);
+			var b = document.getElementById('btn');
+			if(e.style.opacity == '1'){
+				e.style.opacity = '0';
+				e.style.transition = '1s';
+				b.style.background = '#f4511e';
+			}
+			else{
+				e.style.opacity = '1';
+				e.style.transition = '1s';
+				b.style.background='orange';
+			}
+				
+		}
+		
+		function load(){
+			myVar = setTimeout(showPage, 3000);
+		}
+		
+		function showPage() {
+			document.getElementById("loader").style.display = "none";
+			document.getElementById("myDiv").style.display = "block";
+		}
+	</script>
 </html>
