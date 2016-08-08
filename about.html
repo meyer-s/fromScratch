@@ -1,11 +1,179 @@
 <!DOCTYPE html>
 <html lang='en'>
 	<meta charset="UTF-8">
+	<title>About</title>
 	<link rel="icon" href="favicon.ico">
 	<meta name="application-name" content="&nbsp;"/>
 	<meta name="msapplication-TileColor" content="#FFFFFF" />
 	<meta name="msapplication-TileImage" content="http://poper0.github.io/fromScratchmstile-144x144.png" />
 	<link rel="stylesheet" type="text/css" href="css/myStyle.css" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+html {
+    font-family: "PT sans";
+}
+.header {
+    background-color: #9933cc;
+    color: #ffffff;
+    padding: 15px;
+}
+.menu ul {
+    list-style-type: none;
+	background-color:rgba(0,0,0,0);
+    margin: 0;
+    padding: 0;
+	height:auto;
+}
+.menu li {
+    padding: 8px;
+    margin-bottom: 7px;
+	clear:left;
+	text-align:center;
+	width:100%;
+    background-color :#dab3ff;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.menu li:hover {
+    background-color: #cc99ff;
+}
+
+.aside {
+    background-color: #33b5e5;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+.footer {
+    background-color: #0099cc;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px;
+}
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-m-1 {width: 8.33%;}
+    .col-m-2 {width: 16.66%;}
+    .col-m-3 {width: 25%;}
+    .col-m-4 {width: 33.33%;}
+    .col-m-5 {width: 41.66%;}
+    .col-m-6 {width: 50%;}
+    .col-m-7 {width: 58.33%;}
+    .col-m-8 {width: 66.66%;}
+    .col-m-9 {width: 75%;}
+    .col-m-10 {width: 83.33%;}
+    .col-m-11 {width: 91.66%;}
+    .col-m-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+ul.tab {
+    list-style-type: none;
+	background-color:rgba(0,0,0,0);
+    margin: 0;
+	width:100%;
+	clear:left;
+	display:block;
+    padding: 0;
+	height:auto;
+}
+
+ul.tab li {
+	float:none;
+	text-align:center;
+	width:100%;
+	display:block;	
+    background-color :#33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+ul.tab li a{
+    padding: 8px;
+    margin-bottom: 7px;
+	float:none;
+	text-align:center;
+	width:100%;
+	display:block;	
+    background-color :#33b5e5;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+ul.tab li a:hover {
+    background-color: #0099cc;}
+
+ul.tab li a:focus, ul.tab.active {background-color: #ccc;}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+    float: left;
+    padding: 15px;
+}
+
+.tabcontent {
+    -webkit-animation: fadeEffect 1s;
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+}
+
+@-webkit-keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#grad1 { 
+    background: -webkit-linear-gradient(top, rgba(217,0,54,.5), rgba(217,0,54,1)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom, rgba(217,0,54,.5), rgba(217,0,54,1)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom, rgba(217,0,54,.5), rgba(217,0,54,1)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom, rgba(217,0,54,.5), rgba(217,0,54,1)); /* Standard syntax (must be last) */
+}
+</style>
+		
+	<div class="header" id="grad1"  style="margin-bottom:5px">
+		<h1>About</h1>
+	</div>
+
+	<div class="row">
 	<nav>
 		<ul>
 			<li><a href="index.html" >Home</a></li>
@@ -18,7 +186,84 @@
 				</div>
 			</li>
 		</ul>
-	</nav>
-	<br>
+	</nav></div>
+	<div class="row">
+		<div class="col-3">
+			<ul class="tab">
+				<li><a href="#" id="text1" class="tablinks" onclick="openTab(event, 'potato')">Tab 1</a></li>
+				<li><a href="#" id="text2" class="tablinks" onclick="openTab(event, 'tomato')">Tab 2</a></li>
+				<li><a href="#" id="text3" class="tablinks" onclick="openTab(event, 'avocado')">Tab 3</a></li>
+			</ul>
+		</div>
+		
+		
+		<div class="col-6 col-m-9">
+			<div id="potato" class="tabcontent">
+			  <h3>Tab 1</h3>
+			  <p>Check out these tabs</p>
+			</div>
+
+			<div id="tomato" class="tabcontent">
+			  <h3>Tab 2</h3>
+			  <p>Holy Moly</p> 
+			</div>
+
+			<div id="avocado" class="tabcontent">
+			  <h3>Tab 3</h3>
+			  <p>Wowee</p>
+			</div>
+			<div id="huh">
+				<h1>Grid Structure</h1>
+				<p>Using a grid structure to create a resizeable page that responds decently, but not ideally.</p>
+			</div>
+		</div>
+
+		<div class="col-3 col-m-12">
+			<div class="aside">
+				<h2>What?</h2>
+				<p>iunno</p>
+				<h2>Where?</h2>
+				<p>over the rainbow</p>
+				<h2>How?</h2>
+				<p>Skittles</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class= "col-3 col-m-3 menu">
+			<ul>
+				<li>hi</li>
+				<li>list</li>
+				<li> not a tabs </li>
+			</ul>
+		</div>
+	</div>
+	<div class="footer">
+	<p>Resize the browser window to see how the content respond to the resizing.</p>
+	</div>
+	<script>
+	
+	function openTab(evt, tabName) {
+		// Declare all variables
+		var i, tabcontent, tablinks;
+
+		// Get all elements with class="tabcontent" and hide them
+		tabcontent = document.getElementsByClassName("tabcontent");
+		for (i = 0; i < tabcontent.length; i++) {
+			tabcontent[i].style.display = "none";
+		}
+
+		// Get all elements with class="tablinks" and remove the class "active"
+		tablinks = document.getElementsByClassName("tablinks");
+		for (i = 0; i < tablinks.length; i++) {
+			tablinks[i].className = tablinks[i].className.replace(" active", "");
+		}
+
+		// Show the current tab, and add an "active" class to the link that opened the tab
+		document.getElementById(tabName).style.display = "block";
+		document.getElementById("huh").style.display = "none";
+		evt.currentTarget.className += " active";
+	}
+	</script>
 </html>
 
